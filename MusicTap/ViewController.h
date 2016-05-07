@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @import MediaPlayer;
+@import AVFoundation;
 
-@interface ViewController : UIViewController
+#import "MeterView.h"
 
-@property UIImage *artwork;
+@interface ViewController : UIViewController<MPMediaPickerControllerDelegate>
 
-@property MPMusicPlayerController *musicPlayer;
-@property MPMediaQuery *mediaQuery;
+@property MPMediaPickerController *mediaPicker;
+@property AVAudioPlayer *audioPlayer;
+
+@property IBOutlet MeterView *meterView;
 
 @end
 
